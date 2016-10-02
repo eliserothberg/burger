@@ -1,0 +1,56 @@
+li {
+  background: #777777;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  display: inherit;
+}
+
+.label 
+.form-group {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.create-update-form {
+  background: linen;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h2 {
+  width: 300px;
+  text-align: center;
+}
+button {
+  font-size: 14px;
+  font-family: Helvetica;
+  text-align: center;
+  width: 150px;
+  color: red;
+  background-color: yellow;
+}
+#left {
+  float: left;
+}
+#right {
+  float: right;
+}
+#center {
+  clear: both;
+  margin-left: 35%;
+  font-size: 20px;
+  text-align: center;
+}
