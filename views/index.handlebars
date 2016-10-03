@@ -16,12 +16,29 @@
   <button type="submit">Submit</button>
 </form>
  -->
-<h1>Burgers!</h1>
+<h1>GROCERY LIST</h1>
+<div id="center">
+<form class="create-update-form" action="burgers/create" method="POST">
 
+  <div class="form-group">
+  <h2>Add an Item</h2>
+    <label for="burg">Name:</label><br>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <input type="radio" name="devoured" value="1" checked>Purchased<br>
+    <input type="radio" name="devoured" value="0"> Need to Purchase
+        <br>
+  </div>
+
+  <button type="submit">ADD ITEM</button>
+</form>
+</div>
 
 
 <ul id="left">
-<h2>Burgers not in my belly.</h2>
+<h2>Items To Purchase</h2>
   {{#each burgers}}
     {{#unless this.devoured}}
       <li>
@@ -29,17 +46,20 @@
 
         <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="true">
-          <button type="submit">TO BE EATEN!</button>
+          <button type="submit">Buy Now</button>
         </form>
+
+         <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+  
+  <button type="submit">Delete</button>
+</form>
       </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-
-
 <ul id="right">
-<h2>Burgers in my belly.</h2>
+<h2>Purchased</h2>
   {{#each burgers}}
     {{#if this.devoured}}
       <li>
@@ -47,31 +67,33 @@
 
         <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="false">
-          <button type="submit">EATEN!</button>
+          <button type="submit">Need To Buy Again</button>
         </form>
+
+        <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+  
+  <button type="submit">Delete</button>
+</form>
       </li>
     {{/if}}
   {{/each}}
 </ul>
 
-<div id="center">
+<!-- <div id="center">
 <form class="create-update-form" action="burgers/create" method="POST">
 
   <div class="form-group">
-  <h2>Add a Burger</h2>
-    <label for="burg">Burger Name:</label>
-    <br>
+  <h2>Add an Item</h2>
+    <label for="burg">Name:</label>
     <input type="text" id="burg" name="burger_name">
   </div>
 
   <div class="form-group">
-    <br>
-    <input type="radio" name="devoured" value="1" checked> Eaten!<br>
-    <input type="radio" name="devoured" value="0"> To Be Eaten!
-     <br>
-    <br>
+    <input type="radio" name="devoured" value="1" checked> Need To Buy Again<br>
+    <input type="radio" name="devoured" value="0"> Buy Now
+        <br>
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button type="submit">ADD ITEM</button>
 </form>
-</div>
+</div> -->

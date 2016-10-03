@@ -1,4 +1,7 @@
-li {
+body {
+  background-color: #a9aee8;
+}
+  li {
   background: #777777;
   margin: 5px;
   padding: 5px;
@@ -16,10 +19,14 @@ li {
 }
 
 .create-update-form {
-  background: linen;
+  background: #d6d2e0;
   margin: 5px;
-  padding: 5px;
+  padding-bottom: 5px;
   width: 300px;
+  position: absolute;
+  margin-left: 37.5%;
+  font-size: 20px;
+  text-align: center;
 }
 
 .form-group {
@@ -39,8 +46,8 @@ button {
   font-family: Helvetica;
   text-align: center;
   width: 150px;
-  color: red;
-  background-color: yellow;
+  color: #301a70;
+  background-color: #b385ea;
 }
 #left {
   float: left;
@@ -48,9 +55,14 @@ button {
 #right {
   float: right;
 }
-#center {
+/*#center {
   clear: both;
-  margin-left: 35%;
+  margin-left: 37.5%;
   font-size: 20px;
   text-align: center;
+}*/
+
+#burg {
+  width: 200px;
+  font-size: 14px;
 }
