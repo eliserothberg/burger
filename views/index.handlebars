@@ -16,29 +16,31 @@
   <button type="submit">Submit</button>
 </form>
  -->
-<h1>GROCERY LIST</h1>
+<h1>BURGERS!</h1>
+<img src="../assets/img/burger.png"/>
 <div id="center">
+
 <form class="create-update-form" action="burgers/create" method="POST">
 
   <div class="form-group">
-  <h2>Add an Item</h2>
+  <h2>Add A Burger!</h2>
     <label for="burg">Name:</label><br>
     <input type="text" id="burg" name="burger_name">
   </div>
 
   <div class="form-group">
-    <input type="radio" name="devoured" value="1" checked>Purchased<br>
-    <input type="radio" name="devoured" value="0"> Need to Purchase
+    <input type="radio" name="devoured" value="1" checked> Put in my belly!<br>
+    <input type="radio" name="devoured" value="0"> Was in my belly.
         <br>
   </div>
 
-  <button type="submit">ADD ITEM</button>
+  <button type="submit">ADD</button>
 </form>
 </div>
 
 
 <ul id="left">
-<h2>Items To Purchase</h2>
+<h2>Burgers Not In My Belly.</h2>
   {{#each burgers}}
     {{#unless this.devoured}}
       <li>
@@ -46,7 +48,7 @@
 
         <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="true">
-          <button type="submit">Buy Now</button>
+          <button type="submit">Put In My Belly!</button>
         </form>
 
          <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
@@ -59,7 +61,7 @@
 </ul>
 
 <ul id="right">
-<h2>Purchased</h2>
+<h2>Burgers In My Belly.</h2>
   {{#each burgers}}
     {{#if this.devoured}}
       <li>
@@ -67,7 +69,7 @@
 
         <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
           <input type="hidden" name="devoured" value="false">
-          <button type="submit">Need To Buy Again</button>
+          <button type="submit">Was In My Belly.</button>
         </form>
 
         <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
