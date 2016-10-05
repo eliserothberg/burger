@@ -12,18 +12,15 @@ body {
   padding-top: 10px;
   border-radius: 50px;
 }
-
-.label 
+.label
 .form-group {
   font-weight: bold;
   font-size: 20px;
   text-align: center;
 }
-
 .form-group>h2 {
   margin-top: 50px;
 }
-
 .create-update-form {
   background: #d6d2e0;
   margin-top: 15px;
@@ -40,8 +37,8 @@ body {
 }
 img {
   display: block;
-    margin: auto;
-    padding-bottom: 30px;
+  margin: auto;
+  padding-bottom: 30px;
 }
 
 .form-group {
@@ -51,7 +48,6 @@ h1 {
   text-align: center;
   font-size: 40px;
 }
-
 h2 {
   width: 300px;
   text-align: center;
@@ -73,13 +69,6 @@ button {
   right: 0;
   padding-right: 40px;
 }
-/*#center {
-  clear: both;
-  margin-left: 37.5%;
-  font-size: 20px;
-  text-align: center;
-}*/
-
 #burg {
   width: 200px;
   font-size: 14px;

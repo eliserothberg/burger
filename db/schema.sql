@@ -1,4 +1,3 @@
-
 CREATE TABLE burgers
 (
   id INT NOT NULL AUTO_INCREMENT,
@@ -7,4 +6,3 @@ CREATE TABLE burgers
   date TIMESTAMP NOT NULL,
   PRIMARY KEY (id)
 );
-
